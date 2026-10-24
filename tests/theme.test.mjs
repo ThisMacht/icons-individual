@@ -14,8 +14,19 @@ test('imported folders retain distinct open/closed artwork, including override a
   }
   assert.notEqual(theme.rootFolder, theme.rootFolderExpanded);
   assert.equal(theme.fileExtensions.ts, 'ts');
-  assert.equal(theme.fileNames['package.json'], 'npm');
+  assert.equal(theme.fileNames['package.json'], 'npm-full');
   assert.equal(theme.file, 'document');
+});
+
+test('full file mappings cover framework files, source aliases, and repaired upstream references', () => {
+  const theme = createTheme();
+  assert.equal(theme.fileExtensions['component.ts'], 'angular-component');
+  assert.equal(theme.fileExtensions['spec.ts'], 'tests');
+  assert.equal(theme.fileNames['agents.md'], 'robot');
+  assert.equal(theme.fileNames['readme.md'], 'readme');
+  assert.equal(theme.fileExtensions.less, 'brackets-sky');
+  assert.equal(theme.languageIds.yml, 'yaml');
+  assert.equal(theme.fileNames['go.mod'], 'go-pink');
 });
 
 test('duplicate definition IDs fail before they can be overwritten', () => {
