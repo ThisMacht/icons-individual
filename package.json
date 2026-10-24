@@ -1,0 +1,41 @@
+{
+  "name": "icons-individual",
+  "displayName": "Icons Individual",
+  "description": "An independent file icon theme with the Antigravity/Symbols folder collection.",
+  "version": "0.1.0",
+  "publisher": "icons-individual-local",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThisMacht/icons-individual.git"
+  },
+  "engines": {
+    "vscode": "^1.88.0",
+    "node": ">=22"
+  },
+  "categories": ["Themes"],
+  "keywords": ["icons", "file-icon-theme", "folders"],
+  "type": "module",
+  "capabilities": {
+    "untrustedWorkspaces": { "supported": true },
+    "virtualWorkspaces": true
+  },
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "icons-individual",
+        "label": "Icons Individual",
+        "path": "./dist/icons-individual-icon-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node scripts/build-theme.mjs",
+    "check": "node --test && node scripts/check-theme.mjs",
+    "package": "vsce package --no-dependencies",
+    "vscode:prepublish": "npm run build && npm run check"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "4.0.0"
+  }
+}

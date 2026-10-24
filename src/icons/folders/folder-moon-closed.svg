@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        
+        <mask id="decoupe">
+            <rect width="100%" height="100%" fill="white" />
+            <g stroke="black" stroke-width="2.5"><g transform="matrix(0.5 0 0 0.5 12.5 9.7)"> <path vector-effect="non-scaling-stroke" d="M11.085 4.509A8.5 8.5 0 1 0 19.991 13.415A8.9 8.9 0 0 1 11.085 4.509Z" fill="black" stroke="black"/> <path vector-effect="non-scaling-stroke" d="M18.412 2.428A3.66 3.66 0 1 1 18.412 9.748A3.66 3.66 0 1 1 18.412 2.428Z" fill="black" stroke="black"/> </g><circle cx="20" cy="16" r="3" fill="black" stroke="none" /></g>
+        </mask>
+    </defs><path d="M7.78388 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9.875C21 8.77043 20.1046 7.875 19 7.875H12.7161C12.2531 7.875 11.8044 7.71435 11.4466 7.42045L9.05336 5.45455C8.69558 5.16065 8.2469 5 7.78388 5Z" stroke="#64748B" stroke-width="2" fill="#64748B" mask="url(#decoupe)"/><g transform="matrix(0.5 0 0 0.5 12.5 9.7)"> <path d="M11.085 4.509A8.5 8.5 0 1 0 19.991 13.415A8.9 8.9 0 0 1 11.085 4.509Z" fill="#8B5CF6"/> <path d="M18.412 2.428A3.66 3.66 0 1 1 18.412 9.748A3.66 3.66 0 1 1 18.412 2.428Z" fill="#8B5CF6"/> </g></svg>

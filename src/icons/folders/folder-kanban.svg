@@ -1,0 +1,54 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:c2pa="http://c2pa.org/manifest">
+<defs>
+  <clipPath id="kb-cut">
+    <path clip-rule="evenodd" d="M0 0H24V24H0Z M14.83 10A2.83 2.83 0 0 0 12 12.83V20.17A2.83 2.83 0 0 0 14.83 23H22.17A2.83 2.83 0 0 0 25 20.17V12.83A2.83 2.83 0 0 0 22.17 10Z"/>
+  </clipPath>
+</defs>
+
+
+<path clip-path="url(#kb-cut)" fill-rule="evenodd" clip-rule="evenodd" d="M5 4C3.34315 4 2 5.34315 2 7V17C2 18.6569 3.34315 20 5 20H13V18H5C4.44772 18 4 17.5523 4 17V7C4 6.44772 4.44772 6 5 6H7.78388C8.01539 6 8.23973 6.08033 8.41862 6.22727L10.8119 8.19318C11.3486 8.63402 12.0216 8.875 12.7161 8.875H19C19.5523 8.875 20 9.32272 20 9.875V10H22V9.875C22 8.21815 20.6569 6.875 19 6.875H12.7161C12.4846 6.875 12.2603 6.79467 12.0814 6.64773L9.6881 4.68182C9.15142 4.24098 8.47841 4 7.78388 4H5Z" fill="#64748B"/>
+
+
+<g id="kanban" transform="translate(13 11) scale(1.2222) translate(-15 -12.5)">
+
+  <rect x="15.55" y="13.05" width="2.4" height="2.15" fill="#FF6C9D"/>
+  <rect x="15.55" y="15.55" width="2.4" height="5.4"  fill="#F45687"/>
+  <rect x="18.3"  y="13.05" width="2.4" height="2.15" fill="#FFE094"/>
+  <rect x="18.3"  y="15.55" width="2.4" height="5.4"  fill="#FFCD7D"/>
+  <rect x="21.05" y="13.05" width="2.4" height="2.15" fill="#68DDC1"/>
+  <rect x="21.05" y="15.55" width="2.4" height="5.4"  fill="#4FC6AF"/>
+
+
+  <rect x="16.25" y="13.925" width="1" height="0.4" rx="0.2" fill="#F45687"/>
+  <rect x="19"    y="13.925" width="1" height="0.4" rx="0.2" fill="#FFCD7D"/>
+  <rect x="21.75" y="13.925" width="1" height="0.4" rx="0.2" fill="#4FC6AF"/>
+
+
+  <g fill="#DB4070">
+    <rect x="16.25" y="16.6" width="1" height="0.4" rx="0.2"/>
+    <rect x="16.25" y="17.6" width="1" height="0.4" rx="0.2"/>
+    <rect x="16.25" y="18.6" width="1" height="0.4" rx="0.2"/>
+    <rect x="16.25" y="19.6" width="1" height="0.4" rx="0.2"/>
+  </g>
+  <g fill="#FFAF5F">
+    <rect x="19" y="16.6" width="1" height="0.4" rx="0.2"/>
+    <rect x="19" y="17.6" width="1" height="0.4" rx="0.2"/>
+    <rect x="19" y="18.6" width="1" height="0.4" rx="0.2"/>
+    <rect x="19" y="19.6" width="1" height="0.4" rx="0.2"/>
+  </g>
+  <g fill="#35AF9D">
+    <rect x="21.75" y="16.6" width="1" height="0.4" rx="0.2"/>
+    <rect x="21.75" y="17.6" width="1" height="0.4" rx="0.2"/>
+    <rect x="21.75" y="18.6" width="1" height="0.4" rx="0.2"/>
+    <rect x="21.75" y="19.6" width="1" height="0.4" rx="0.2"/>
+  </g>
+
+
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#595e64" d="
+    M16.5 12.5H22.5A1.5 1.5 0 0 1 24 14V20A1.5 1.5 0 0 1 22.5 21.5H16.5A1.5 1.5 0 0 1 15 20V14A1.5 1.5 0 0 1 16.5 12.5Z
+    M16.5 13.25H22.5A0.75 0.75 0 0 1 23.25 14V20A0.75 0.75 0 0 1 22.5 20.75H16.5A0.75 0.75 0 0 1 15.75 20V14A0.75 0.75 0 0 1 16.5 13.25Z"/>
+  <rect x="17.75" y="13.05" width="0.75" height="7.9" fill="#595e64"/>
+  <rect x="20.5"  y="13.05" width="0.75" height="7.9" fill="#595e64"/>
+  <rect x="15.55" y="15"    width="7.9"  height="0.75" fill="#595e64"/>
+</g>
+</svg>
