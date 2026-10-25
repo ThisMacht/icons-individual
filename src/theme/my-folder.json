@@ -32,6 +32,7 @@
     ["folder-sql", "my/folder/folder-sql.svg"]
   ],
   "associations": {
+    ".aws": "folder-aws",
     ".codex": "folder-codex",
     "airflow": "folder-airflow",
     "data": "folder-dataset",
