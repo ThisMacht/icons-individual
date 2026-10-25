@@ -161,7 +161,6 @@
     "queues": "folder-constants",
     "react": "folder-react",
     "resources": "folder-assets",
-    "results": "folder-target",
     "router": "folder-router",
     "routers": "folder-router",
     "routes": "folder-router",

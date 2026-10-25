@@ -16,6 +16,8 @@
     ["folder-rainbow", "my/folder/folder-rainbow.svg"],
     ["folder-raw-closed", "my/folder/folder-raw-closed.svg"],
     ["folder-raw", "my/folder/folder-raw.svg"],
+    ["folder-results-closed", "my/folder/folder-results-closed.svg"],
+    ["folder-results", "my/folder/folder-results.svg"],
     ["folder-runs-closed", "my/folder/folder-runs-closed.svg"],
     ["folder-runs", "my/folder/folder-runs.svg"]
   ],
@@ -35,6 +37,7 @@
     "pigpig": "folder-pig",
     "processed": "folder-green-outline",
     "raw": "folder-raw",
+    "results": "folder-results",
     "runs": "folder-runs"
   }
 }
