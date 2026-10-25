@@ -13,7 +13,9 @@
     ["folder-rainbow-closed", "my/folder/folder-rainbow-closed.svg"],
     ["folder-rainbow", "my/folder/folder-rainbow.svg"],
     ["folder-raw-closed", "my/folder/folder-raw-closed.svg"],
-    ["folder-raw", "my/folder/folder-raw.svg"]
+    ["folder-raw", "my/folder/folder-raw.svg"],
+    ["folder-runs-closed", "my/folder/folder-runs-closed.svg"],
+    ["folder-runs", "my/folder/folder-runs.svg"]
   ],
   "associations": {
     ".codex": "folder-codex",
@@ -28,6 +30,7 @@
     "pig": "folder-pig",
     "pigpig": "folder-pig",
     "processed": "folder-green-outline",
-    "raw": "folder-raw"
+    "raw": "folder-raw",
+    "runs": "folder-runs"
   }
 }
