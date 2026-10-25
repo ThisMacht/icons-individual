@@ -29,6 +29,28 @@ test('full file mappings cover framework files, source aliases, and repaired ups
   assert.equal(theme.fileNames['go.mod'], 'go-pink');
 });
 
+test('custom pig associations resolve to local SVGs in src/my', () => {
+  const theme = createTheme();
+  validateTheme(theme);
+  for (const name of ['pig', 'pigpig']) {
+    assert.equal(theme.folderNames[name], 'folder-pig-closed');
+    assert.equal(theme.folderNamesExpanded[name], 'folder-pig');
+    assert.equal(theme.fileNames[name], 'pig');
+  }
+  assert.equal(theme.iconDefinitions.pig.iconPath, '../src/my/file/pig.svg');
+  assert.equal(theme.iconDefinitions['folder-pig'].iconPath, '../src/my/folder/folder-pig.svg');
+  assert.equal(theme.iconDefinitions['folder-pig-closed'].iconPath, '../src/my/folder/folder-pig-closed.svg');
+});
+
+test('custom asset paths cannot escape their directories', () => {
+  assert.throws(() => createTheme([
+    ['pig', 'my/file/../pig.svg'],
+  ], { associations: {} }, {}), /Invalid asset/);
+  const theme = createTheme();
+  theme.iconDefinitions.pig.iconPath = '../src/my/file/../pig.svg';
+  assert.throws(() => validateTheme(theme), /invalid local SVG path/);
+});
+
 test('duplicate definition IDs fail before they can be overwritten', () => {
   assert.throws(() => createTheme([
     ['document', 'files/document.svg'],

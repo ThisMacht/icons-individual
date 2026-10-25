@@ -46,8 +46,11 @@ are excluded from the VSIX; `npm audit --omit=dev` reports no vulnerabilities.
 
 - `src/icons/folders/`: 252 vendored folder SVGs, including closed variants.
 - `src/icons/files/`: 325 file SVGs from the pinned Symbols base and Antigravity overrides.
+- `src/my/folder/` and `src/my/file/`: custom folder and file SVGs, included in the VSIX.
 - `src/theme/definitions.json`: explicit `[definition ID, asset path]` pairs.
   An array lets validation detect duplicate IDs before they are overwritten.
+  Reference paths use `folders/` or `files/` under `src/icons/`; custom paths
+  use `my/folder/` or `my/file/` under `src/`.
 - `src/theme/folders.json`: default/root icon IDs and folder-name associations.
   Each named association points at the expanded icon; its collapsed icon uses
   the same ID with `-closed` appended. Both definitions must exist. Unmatched
@@ -66,6 +69,9 @@ register both in `definitions.json`, and associate folder names in `folders.json
 For files, add the SVG and definition, then update `files.json`. Rebuild, check,
 and repackage. The VSIX contains only the manifest, generated theme, SVGs, and
 documentation/licenses; it has no runtime dependencies or activation code.
+
+Folders named `pig` or `pigpig` use the custom pig folder pair. Files named
+exactly `pig` or `pigpig` use the custom pig file icon.
 
 ## Future custom modes
 

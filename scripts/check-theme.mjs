@@ -13,10 +13,10 @@ try {
   assert.equal(contribution.id, 'icons-individual', 'Unexpected theme ID');
   assert.equal(contribution.label, 'Icons Individual', 'Unexpected theme label');
   assert.equal(resolve(root, contribution.path), themePath, 'Theme contribution path is incorrect');
-  for (const category of ['files', 'folders']) {
-    for (const name of readdirSync(resolve(root, `src/icons/${category}`))) {
+  for (const directory of ['src/icons/files', 'src/icons/folders', 'src/my/file', 'src/my/folder']) {
+    for (const name of readdirSync(resolve(root, directory))) {
       if (name.endsWith('.svg')) {
-        assert(assets.has(resolve(root, `src/icons/${category}`, name)), `SVG has no definition: ${category}/${name}`);
+        assert(assets.has(resolve(root, directory, name)), `SVG has no definition: ${directory}/${name}`);
       }
     }
   }

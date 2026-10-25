@@ -32,8 +32,8 @@ export function createTheme(
     const [id, asset] = pair;
     assert(typeof id === 'string' && /^[a-z0-9-]+$/.test(id), `Invalid definition ID: ${id}`);
     assert(!Object.hasOwn(iconDefinitions, id), `Duplicate definition ID: ${id}`);
-    assert(typeof asset === 'string' && /^(files|folders)\/[a-z0-9-]+\.svg$/.test(asset), `Invalid asset: ${asset}`);
-    iconDefinitions[id] = { iconPath: `../src/icons/${asset}` };
+    assert(typeof asset === 'string' && /^(files|folders|my\/(file|folder))\/[a-z0-9-]+\.svg$/.test(asset), `Invalid asset: ${asset}`);
+    iconDefinitions[id] = { iconPath: asset.startsWith('my/') ? `../src/${asset}` : `../src/icons/${asset}` };
   }
 
   object(folders, 'folders');
@@ -76,7 +76,7 @@ export function validateTheme(theme) {
     object(definition, `Definition ${id}`);
     const { iconPath } = definition;
     assert(Object.keys(definition).length === 1 && typeof iconPath === 'string', `Definition ${id} must contain iconPath`);
-    assert(/^\.\.\/src\/icons\/(files|folders)\/[a-z0-9-]+\.svg$/.test(iconPath), `Definition ${id}: invalid local SVG path ${iconPath}`);
+    assert(/^\.\.\/src\/(icons\/(files|folders)|my\/(file|folder))\/[a-z0-9-]+\.svg$/.test(iconPath), `Definition ${id}: invalid local SVG path ${iconPath}`);
     const asset = resolve(dirname(themePath), iconPath);
     let svg;
     try {
