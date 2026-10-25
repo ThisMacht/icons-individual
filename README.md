@@ -79,6 +79,7 @@ exactly `pig` or `pigpig` use the custom pig file icon.
 Folder `gay` uses the rainbow pair; folders `license` and `licenses` use the
 copyright badge pair. These mappings live in `src/theme/my-folder.json`.
 Folders `data`, `dataset`, and `datasets` use the custom pink square-layer dataset pair.
+Folder `.codex` uses its own teal terminal `>_` pair.
 
 ## Future custom modes
 

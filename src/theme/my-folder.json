@@ -1,5 +1,7 @@
 {
   "definitions": [
+    ["folder-codex-closed", "my/folder/folder-codex-closed.svg"],
+    ["folder-codex", "my/folder/folder-codex.svg"],
     ["folder-dataset-closed", "my/folder/folder-dataset-closed.svg"],
     ["folder-dataset", "my/folder/folder-dataset.svg"],
     ["folder-license-closed", "my/folder/folder-license-closed.svg"],
@@ -10,6 +12,7 @@
     ["folder-rainbow", "my/folder/folder-rainbow.svg"]
   ],
   "associations": {
+    ".codex": "folder-codex",
     "data": "folder-dataset",
     "dataset": "folder-dataset",
     "datasets": "folder-dataset",
