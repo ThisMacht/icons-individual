@@ -35,11 +35,13 @@ export function createTheme(
     object(custom, label);
     assert(Array.isArray(custom.definitions), `${label}.definitions must be an array of [id, asset] pairs`);
     object(custom[mapping], `${label}.${mapping}`);
-    if (label === 'my-file' && custom.fileExtensions !== undefined) {
-      object(custom.fileExtensions, 'my-file.fileExtensions');
+    if (label === 'my-file') {
+      for (const key of ['fileExtensions', 'languageIds']) {
+        if (custom[key] !== undefined) object(custom[key], `my-file.${key}`);
+      }
     }
     for (const key of Object.keys(custom)) {
-      assert(['definitions', mapping].includes(key) || (label === 'my-file' && key === 'fileExtensions'), `Unknown ${label} property: ${key}`);
+      assert(['definitions', mapping].includes(key) || (label === 'my-file' && ['fileExtensions', 'languageIds'].includes(key)), `Unknown ${label} property: ${key}`);
     }
   }
   const iconDefinitions = {};
@@ -57,6 +59,7 @@ export function createTheme(
   object(files, 'files');
   if (files.fileNames !== undefined) object(files.fileNames, 'files.fileNames');
   if (files.fileExtensions !== undefined) object(files.fileExtensions, 'files.fileExtensions');
+  if (files.languageIds !== undefined) object(files.languageIds, 'files.languageIds');
   for (const key of Object.keys(folders)) {
     assert(['folder', 'folderExpanded', 'rootFolder', 'rootFolderExpanded', 'associations'].includes(key), `Unknown folder property: ${key}`);
   }
@@ -75,6 +78,7 @@ export function createTheme(
     iconDefinitions,
     ...files,
     fileExtensions: { ...files.fileExtensions, ...myFiles.fileExtensions },
+    languageIds: { ...files.languageIds, ...myFiles.languageIds },
     fileNames: { ...files.fileNames, ...myFiles.fileNames },
     ...folderDefaults,
     folderNames,

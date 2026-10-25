@@ -1,5 +1,6 @@
 {
   "definitions": [
+    ["makefile", "my/file/makefile.svg"],
     ["pig", "my/file/pig.svg"],
     ["rar", "my/file/rar.svg"],
     ["tar", "my/file/tar.svg"],
@@ -44,7 +45,13 @@
     "zstd": "zip"
   },
   "fileNames": {
+    "bsdmakefile": "makefile",
+    "gnumakefile": "makefile",
+    "makefile": "makefile",
     "pig": "pig",
     "pigpig": "pig"
+  },
+  "languageIds": {
+    "makefile": "makefile"
   }
 }

@@ -91,6 +91,23 @@ test('custom archive extensions override imported mappings and preserve unrelate
   assert.deepEqual(files.fileExtensions, { zip: 'archive', ts: 'ts' });
 });
 
+test('Makefiles use a custom hammer by filename and language ID', () => {
+  const theme = createTheme();
+  validateTheme(theme);
+  for (const name of ['makefile', 'gnumakefile', 'bsdmakefile']) {
+    assert.equal(theme.fileNames[name], 'makefile');
+  }
+  assert.equal(theme.languageIds.makefile, 'makefile');
+  assert.equal(theme.iconDefinitions.makefile.iconPath, '../src/my/file/makefile.svg');
+  assert.equal(theme.languageIds.typescript, 'ts');
+  const files = { languageIds: { makefile: 'gear' } };
+  const custom = { definitions: [], fileNames: {}, languageIds: { makefile: 'makefile' } };
+  assert.equal(createTheme(undefined, undefined, files, undefined, custom).languageIds.makefile, 'makefile');
+  assert.equal(createTheme(undefined, undefined, files, undefined,
+    { ...custom, languageIds: {} }).languageIds.makefile, 'gear');
+  assert.deepEqual(files.languageIds, { makefile: 'gear' });
+});
+
 test('custom layers retain schema validation and reject duplicate imported IDs', () => {
   assert.throws(() => createTheme(undefined, undefined, undefined,
     { definitions: [], associations: [] }), /my-folder.associations must be an object/);
@@ -102,6 +119,9 @@ test('custom layers retain schema validation and reject duplicate imported IDs',
   assert.throws(() => createTheme(undefined, undefined, undefined, undefined,
     { definitions: [], fileNames: {}, fileExtensions: [] }), /my-file.fileExtensions must be an object/);
   assert.throws(() => createTheme(undefined, undefined, { fileExtensions: [] }), /files.fileExtensions must be an object/);
+  assert.throws(() => createTheme(undefined, undefined, undefined, undefined,
+    { definitions: [], fileNames: {}, languageIds: [] }), /my-file.languageIds must be an object/);
+  assert.throws(() => createTheme(undefined, undefined, { languageIds: [] }), /files.languageIds must be an object/);
 });
 
 test('custom asset paths cannot escape their directories', () => {
