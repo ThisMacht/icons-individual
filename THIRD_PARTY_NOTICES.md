@@ -49,3 +49,7 @@ undefined upstream targets were repaired: extension `less` uses `brackets-sky`
 
 No reference extension identity, runtime configuration code, release scripts,
 or dependency on either reference repository is included.
+
+The custom `src/my/folder/folder-license.svg` and its closed variant reuse the
+copyright glyph paths from the vendored Symbols `src/icons/files/license.svg`,
+scaled as a folder badge. The same upstream MIT notices apply to that artwork.

@@ -47,10 +47,9 @@ are excluded from the VSIX; `npm audit --omit=dev` reports no vulnerabilities.
 - `src/icons/folders/`: 252 vendored folder SVGs, including closed variants.
 - `src/icons/files/`: 325 file SVGs from the pinned Symbols base and Antigravity overrides.
 - `src/my/folder/` and `src/my/file/`: custom folder and file SVGs, included in the VSIX.
-- `src/theme/definitions.json`: explicit `[definition ID, asset path]` pairs.
+- `src/theme/definitions.json`: imported `[definition ID, asset path]` pairs.
   An array lets validation detect duplicate IDs before they are overwritten.
-  Reference paths use `folders/` or `files/` under `src/icons/`; custom paths
-  use `my/folder/` or `my/file/` under `src/`.
+  Reference paths use `folders/` or `files/` under `src/icons/`.
 - `src/theme/folders.json`: default/root icon IDs and folder-name associations.
   Each named association points at the expanded icon; its collapsed icon uses
   the same ID with `-closed` appended. Both definitions must exist. Unmatched
@@ -58,6 +57,10 @@ are excluded from the VSIX; `npm audit --omit=dev` reports no vulnerabilities.
 - `src/theme/files.json`: default file icon and the full imported extension,
   filename, and language mappings (474 extensions, 833 filenames, 111 language IDs).
   Association names use lowercase, as VS Code matches them without case sensitivity.
+- `src/theme/my-folder.json` and `src/theme/my-file.json`: custom definitions
+  and folder/filename mappings for SVGs under `src/my/`. Custom mappings override
+  imported names. Clear their `associations` or `fileNames` entries to restore
+  the imported mappings, then rebuild.
 - `scripts/theme.mjs`: assembles and validates the theme from these sources.
 - `scripts/build-theme.mjs`: deterministically writes
   `dist/icons-individual-icon-theme.json`. Do not edit this generated file.
@@ -67,11 +70,14 @@ are excluded from the VSIX; `npm audit --omit=dev` reports no vulnerabilities.
 To add a folder icon, put its expanded and closed SVGs in `src/icons/folders/`,
 register both in `definitions.json`, and associate folder names in `folders.json`.
 For files, add the SVG and definition, then update `files.json`. Rebuild, check,
-and repackage. The VSIX contains only the manifest, generated theme, SVGs, and
+and repackage. For custom icons, use `src/my/` and the corresponding `my-folder.json`
+or `my-file.json` instead. The VSIX contains only the manifest, generated theme, SVGs, and
 documentation/licenses; it has no runtime dependencies or activation code.
 
 Folders named `pig` or `pigpig` use the custom pig folder pair. Files named
 exactly `pig` or `pigpig` use the custom pig file icon.
+Folder `gay` uses the rainbow pair; folders `license` and `licenses` use the
+copyright badge pair. These mappings live in `src/theme/my-folder.json`.
 
 ## Future custom modes
 

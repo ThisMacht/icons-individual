@@ -1,0 +1,17 @@
+{
+  "definitions": [
+    ["folder-license-closed", "my/folder/folder-license-closed.svg"],
+    ["folder-license", "my/folder/folder-license.svg"],
+    ["folder-pig-closed", "my/folder/folder-pig-closed.svg"],
+    ["folder-pig", "my/folder/folder-pig.svg"],
+    ["folder-rainbow-closed", "my/folder/folder-rainbow-closed.svg"],
+    ["folder-rainbow", "my/folder/folder-rainbow.svg"]
+  ],
+  "associations": {
+    "gay": "folder-rainbow",
+    "license": "folder-license",
+    "licenses": "folder-license",
+    "pig": "folder-pig",
+    "pigpig": "folder-pig"
+  }
+}

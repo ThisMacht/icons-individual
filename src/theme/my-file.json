@@ -1,0 +1,9 @@
+{
+  "definitions": [
+    ["pig", "my/file/pig.svg"]
+  ],
+  "fileNames": {
+    "pig": "pig",
+    "pigpig": "pig"
+  }
+}

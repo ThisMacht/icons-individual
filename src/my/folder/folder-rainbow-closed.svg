@@ -1,0 +1,17 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="rainbow-cutout">
+      <rect width="24" height="24" fill="white"/>
+      <path d="M11 21V20a7 7 0 0 1 14 0v1Z" fill="black"/>
+    </mask>
+  </defs>
+  <path d="M7.78388 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9.875C21 8.77043 20.1046 7.875 19 7.875H12.7161C12.2531 7.875 11.8044 7.71435 11.4466 7.42045L9.05336 5.45455C8.69558 5.16065 8.2469 5 7.78388 5Z" stroke="#64748B" stroke-width="2" fill="#64748B" mask="url(#rainbow-cutout)"/>
+  <g stroke-width="1" stroke-linecap="round">
+    <path d="M12.5 20a5.5 5.5 0 0 1 11 0" stroke="#EF4444"/>
+    <path d="M13.5 20a4.5 4.5 0 0 1 9 0" stroke="#FB923C"/>
+    <path d="M14.5 20a3.5 3.5 0 0 1 7 0" stroke="#FACC15"/>
+    <path d="M15.5 20a2.5 2.5 0 0 1 5 0" stroke="#4ADE80"/>
+    <path d="M16.5 20a1.5 1.5 0 0 1 3 0" stroke="#60A5FA"/>
+    <path d="M17.5 20a0.5 0.5 0 0 1 1 0" stroke="#C084FC"/>
+  </g>
+</svg>

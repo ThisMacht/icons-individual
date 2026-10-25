@@ -24,10 +24,23 @@ export function createTheme(
   definitions = readSource('definitions'),
   folders = readSource('folders'),
   files = readSource('files'),
+  myFolders = readSource('my-folder'),
+  myFiles = readSource('my-file'),
 ) {
   assert(Array.isArray(definitions), 'definitions must be an array of [id, asset] pairs');
+  for (const [label, custom, mapping] of [
+    ['my-folder', myFolders, 'associations'],
+    ['my-file', myFiles, 'fileNames'],
+  ]) {
+    object(custom, label);
+    assert(Array.isArray(custom.definitions), `${label}.definitions must be an array of [id, asset] pairs`);
+    object(custom[mapping], `${label}.${mapping}`);
+    for (const key of Object.keys(custom)) {
+      assert(['definitions', mapping].includes(key), `Unknown ${label} property: ${key}`);
+    }
+  }
   const iconDefinitions = {};
-  for (const pair of definitions) {
+  for (const pair of [...definitions, ...myFolders.definitions, ...myFiles.definitions]) {
     assert(Array.isArray(pair) && pair.length === 2, 'Each definition must be [id, asset]');
     const [id, asset] = pair;
     assert(typeof id === 'string' && /^[a-z0-9-]+$/.test(id), `Invalid definition ID: ${id}`);
@@ -39,6 +52,7 @@ export function createTheme(
   object(folders, 'folders');
   object(folders.associations, 'folders.associations');
   object(files, 'files');
+  if (files.fileNames !== undefined) object(files.fileNames, 'files.fileNames');
   for (const key of Object.keys(folders)) {
     assert(['folder', 'folderExpanded', 'rootFolder', 'rootFolderExpanded', 'associations'].includes(key), `Unknown folder property: ${key}`);
   }
@@ -46,7 +60,8 @@ export function createTheme(
     assert(['file', 'fileExtensions', 'fileNames', 'languageIds'].includes(key), `Unknown file property: ${key}`);
   }
 
-  const { associations, ...folderDefaults } = folders;
+  const { associations: importedAssociations, ...folderDefaults } = folders;
+  const associations = { ...importedAssociations, ...myFolders.associations };
   const folderNames = {};
   for (const [name, id] of Object.entries(associations)) {
     assert(typeof id === 'string', `Folder association ${name} must reference an ID`);
@@ -55,6 +70,7 @@ export function createTheme(
   return {
     iconDefinitions,
     ...files,
+    fileNames: { ...files.fileNames, ...myFiles.fileNames },
     ...folderDefaults,
     folderNames,
     folderNamesExpanded: { ...associations },

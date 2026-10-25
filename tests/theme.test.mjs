@@ -42,6 +42,45 @@ test('custom pig associations resolve to local SVGs in src/my', () => {
   assert.equal(theme.iconDefinitions['folder-pig-closed'].iconPath, '../src/my/folder/folder-pig-closed.svg');
 });
 
+test('custom mappings override imported names and can be cleared to restore them', () => {
+  const folders = { associations: { pig: 'folder-node' } };
+  const files = { fileNames: { pig: 'document' } };
+  const myFolders = { definitions: [], associations: { pig: 'folder-pig' } };
+  const myFiles = { definitions: [], fileNames: { pig: 'pig' } };
+  const custom = createTheme(undefined, folders, files, myFolders, myFiles);
+  assert.equal(custom.folderNames.pig, 'folder-pig-closed');
+  assert.equal(custom.folderNamesExpanded.pig, 'folder-pig');
+  assert.equal(custom.fileNames.pig, 'pig');
+  const restored = createTheme(undefined, folders, files,
+    { ...myFolders, associations: {} }, { ...myFiles, fileNames: {} });
+  assert.equal(restored.folderNames.pig, 'folder-node-closed');
+  assert.equal(restored.folderNamesExpanded.pig, 'folder-node');
+  assert.equal(restored.fileNames.pig, 'document');
+  assert.deepEqual(folders.associations, { pig: 'folder-node' });
+  assert.deepEqual(files.fileNames, { pig: 'document' });
+});
+
+test('imported sources contain no custom definitions or pig aliases', () => {
+  const imported = createTheme(undefined, undefined, undefined,
+    { definitions: [], associations: {} }, { definitions: [], fileNames: {} });
+  validateTheme(imported);
+  assert(!Object.values(imported.iconDefinitions).some(d => d.iconPath.startsWith('../src/my/')));
+  for (const name of ['pig', 'pigpig']) {
+    assert(!Object.hasOwn(imported.folderNames, name));
+    assert(!Object.hasOwn(imported.fileNames, name));
+  }
+});
+
+test('custom layers retain schema validation and reject duplicate imported IDs', () => {
+  assert.throws(() => createTheme(undefined, undefined, undefined,
+    { definitions: [], associations: [] }), /my-folder.associations must be an object/);
+  assert.throws(() => createTheme(undefined, undefined, undefined, undefined,
+    { definitions: [], fileNames: {}, typo: {} }), /Unknown my-file property: typo/);
+  assert.throws(() => createTheme(undefined, undefined, undefined, undefined,
+    { definitions: [['document', 'my/file/pig.svg']], fileNames: {} }), /Duplicate definition ID: document/);
+  assert.throws(() => createTheme(undefined, undefined, { fileNames: [] }), /files.fileNames must be an object/);
+});
+
 test('custom asset paths cannot escape their directories', () => {
   assert.throws(() => createTheme([
     ['pig', 'my/file/../pig.svg'],
