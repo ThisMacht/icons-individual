@@ -58,8 +58,8 @@ are excluded from the VSIX; `npm audit --omit=dev` reports no vulnerabilities.
   filename, and language mappings (474 extensions, 833 filenames, 111 language IDs).
   Association names use lowercase, as VS Code matches them without case sensitivity.
 - `src/theme/my-folder.json` and `src/theme/my-file.json`: custom definitions
-  and folder/filename mappings for SVGs under `src/my/`. Custom mappings override
-  imported names. Clear their `associations` or `fileNames` entries to restore
+  and folder/filename/extension mappings for SVGs under `src/my/`. Custom mappings override
+  imported names. Clear their `associations`, `fileNames`, or `fileExtensions` entries to restore
   the imported mappings, then rebuild.
 - `scripts/theme.mjs`: assembles and validates the theme from these sources.
 - `scripts/build-theme.mjs`: deterministically writes
@@ -83,6 +83,8 @@ Folder `.codex` uses a white scalloped terminal `>_` pair with a slate outline f
 Folders `markdown` and `markdowns` use the Markdown glyph inside a blue rounded rectangle.
 Folder `raw` uses a brown vector `RAW` label; `processed` uses the green outline icon.
 Folder `runs` uses a blue play triangle.
+ZIP and other common compressed files use a blue zipper icon; RAR uses stacked
+books and TAR (including `.tar.gz`, `.tgz`, and `.tar.xz`) uses a brown archive box.
 
 ## Future custom modes
 

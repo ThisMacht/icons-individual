@@ -71,6 +71,26 @@ test('imported sources contain no custom definitions or pig aliases', () => {
   }
 });
 
+test('custom archive extensions override imported mappings and preserve unrelated files', () => {
+  const theme = createTheme();
+  validateTheme(theme);
+  for (const [extension, id] of [
+    ['zip', 'zip'], ['rar', 'rar'], ['tar', 'tar'], ['tar.gz', 'tar'],
+    ['tar.bz2', 'tar'], ['tar.xz', 'tar'], ['tgz', 'tar'], ['7z', 'zip'], ['zst', 'zip'],
+  ]) {
+    assert.equal(theme.fileExtensions[extension], id);
+    assert.equal(theme.iconDefinitions[id].iconPath, `../src/my/file/${id}.svg`);
+  }
+  assert.equal(theme.fileExtensions.ts, 'ts');
+  assert.equal(theme.fileExtensions.jar, 'archive');
+  const files = { fileExtensions: { zip: 'archive', ts: 'ts' } };
+  const custom = { definitions: [], fileNames: {}, fileExtensions: { zip: 'zip' } };
+  assert.equal(createTheme(undefined, undefined, files, undefined, custom).fileExtensions.zip, 'zip');
+  assert.equal(createTheme(undefined, undefined, files, undefined,
+    { ...custom, fileExtensions: {} }).fileExtensions.zip, 'archive');
+  assert.deepEqual(files.fileExtensions, { zip: 'archive', ts: 'ts' });
+});
+
 test('custom layers retain schema validation and reject duplicate imported IDs', () => {
   assert.throws(() => createTheme(undefined, undefined, undefined,
     { definitions: [], associations: [] }), /my-folder.associations must be an object/);
@@ -79,6 +99,9 @@ test('custom layers retain schema validation and reject duplicate imported IDs',
   assert.throws(() => createTheme(undefined, undefined, undefined, undefined,
     { definitions: [['document', 'my/file/pig.svg']], fileNames: {} }), /Duplicate definition ID: document/);
   assert.throws(() => createTheme(undefined, undefined, { fileNames: [] }), /files.fileNames must be an object/);
+  assert.throws(() => createTheme(undefined, undefined, undefined, undefined,
+    { definitions: [], fileNames: {}, fileExtensions: [] }), /my-file.fileExtensions must be an object/);
+  assert.throws(() => createTheme(undefined, undefined, { fileExtensions: [] }), /files.fileExtensions must be an object/);
 });
 
 test('custom asset paths cannot escape their directories', () => {
