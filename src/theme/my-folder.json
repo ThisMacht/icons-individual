@@ -11,7 +11,9 @@
     ["folder-pig-closed", "my/folder/folder-pig-closed.svg"],
     ["folder-pig", "my/folder/folder-pig.svg"],
     ["folder-rainbow-closed", "my/folder/folder-rainbow-closed.svg"],
-    ["folder-rainbow", "my/folder/folder-rainbow.svg"]
+    ["folder-rainbow", "my/folder/folder-rainbow.svg"],
+    ["folder-raw-closed", "my/folder/folder-raw-closed.svg"],
+    ["folder-raw", "my/folder/folder-raw.svg"]
   ],
   "associations": {
     ".codex": "folder-codex",
@@ -24,6 +26,8 @@
     "markdown": "folder-markdown",
     "markdowns": "folder-markdown",
     "pig": "folder-pig",
-    "pigpig": "folder-pig"
+    "pigpig": "folder-pig",
+    "processed": "folder-green-outline",
+    "raw": "folder-raw"
   }
 }
