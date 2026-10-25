@@ -85,6 +85,7 @@ Folders `notebook` and `notebooks` use an orange spiral notebook badge.
 Folder `raw` uses a brown vector `RAW` label; `processed` uses the green outline icon.
 Folder `runs` uses a blue play triangle.
 Folder `results` uses a yellow five-pointed star.
+Folder `sql` uses a blue database badge with vector SQL lettering.
 ZIP and other common compressed files use a blue zipper icon; RAR uses stacked
 books and TAR (including `.tar.gz`, `.tgz`, and `.tar.xz`) uses a brown archive box.
 Makefiles use an orange hammer, selected by filename or the `makefile` language ID.

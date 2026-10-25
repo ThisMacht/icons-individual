@@ -19,7 +19,9 @@
     ["folder-results-closed", "my/folder/folder-results-closed.svg"],
     ["folder-results", "my/folder/folder-results.svg"],
     ["folder-runs-closed", "my/folder/folder-runs-closed.svg"],
-    ["folder-runs", "my/folder/folder-runs.svg"]
+    ["folder-runs", "my/folder/folder-runs.svg"],
+    ["folder-sql-closed", "my/folder/folder-sql-closed.svg"],
+    ["folder-sql", "my/folder/folder-sql.svg"]
   ],
   "associations": {
     ".codex": "folder-codex",
@@ -38,6 +40,7 @@
     "processed": "folder-green-outline",
     "raw": "folder-raw",
     "results": "folder-results",
-    "runs": "folder-runs"
+    "runs": "folder-runs",
+    "sql": "folder-sql"
   }
 }
