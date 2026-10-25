@@ -86,6 +86,7 @@ Folder `raw` uses a brown vector `RAW` label; `processed` uses the green outline
 Folder `runs` uses a blue play triangle.
 Folder `results` uses a yellow five-pointed star.
 Folder `sql` uses a blue database badge with vector SQL lettering.
+Folder `dbt` uses three orange nodes connected as a dependency branch.
 ZIP and other common compressed files use a blue zipper icon; RAR uses stacked
 books and TAR (including `.tar.gz`, `.tgz`, and `.tar.xz`) uses a brown archive box.
 Makefiles use an orange hammer, selected by filename or the `makefile` language ID.
