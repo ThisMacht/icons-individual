@@ -148,8 +148,6 @@
     "nginx": "folder-nginx",
     "node_modules": "folder-node-alt",
     "node_modules_preview": "folder-node-alt",
-    "notebook": "folder-orange-outline",
-    "notebooks": "folder-orange-outline",
     "out": "folder-purple-outline",
     "packages": "folder-modules-bigger",
     "pages": "folder-sky-code",

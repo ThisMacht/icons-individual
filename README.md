@@ -81,6 +81,7 @@ copyright badge pair. These mappings live in `src/theme/my-folder.json`.
 Folders `data`, `dataset`, and `datasets` use the custom pink square-layer dataset pair.
 Folder `.codex` uses a white scalloped terminal `>_` pair with a slate outline for light backgrounds.
 Folders `markdown` and `markdowns` use the Markdown glyph inside a blue rounded rectangle.
+Folders `notebook` and `notebooks` use an orange spiral notebook badge.
 Folder `raw` uses a brown vector `RAW` label; `processed` uses the green outline icon.
 Folder `runs` uses a blue play triangle.
 ZIP and other common compressed files use a blue zipper icon; RAR uses stacked
