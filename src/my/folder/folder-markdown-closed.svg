@@ -1,0 +1,11 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="markdown-cutout">
+      <rect width="24" height="24" fill="white"/>
+      <rect x="11" y="10.5" width="13" height="11.5" rx="2.5" fill="black"/>
+    </mask>
+  </defs>
+  <path d="M7.78388 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9.875C21 8.77043 20.1046 7.875 19 7.875H12.7161C12.2531 7.875 11.8044 7.71435 11.4466 7.42045L9.05336 5.45455C8.69558 5.16065 8.2469 5 7.78388 5Z" stroke="#64748B" stroke-width="2" fill="#64748B" mask="url(#markdown-cutout)"/>
+  <rect x="12.5" y="12" width="11" height="8.5" rx="1.25" stroke="#60A5FA" stroke-width="1.25"/>
+  <path d="M3 15.7143V8H5.32258L7.64516 10.8361L9.96774 8H12.2903V15.7143H9.96774V11.2899L7.64516 14.1261L5.32258 11.2899V15.7143H3ZM17.5161 15.7143L14.0323 11.9706H16.3548V8H18.6774V11.9706H21L17.5161 15.7143Z" fill="#60A5FA" transform="translate(12.6 11) scale(0.45)"/>
+</svg>

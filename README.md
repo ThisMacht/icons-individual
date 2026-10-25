@@ -80,6 +80,7 @@ Folder `gay` uses the rainbow pair; folders `license` and `licenses` use the
 copyright badge pair. These mappings live in `src/theme/my-folder.json`.
 Folders `data`, `dataset`, and `datasets` use the custom pink square-layer dataset pair.
 Folder `.codex` uses its own teal hexagonal terminal `>_` pair.
+Folders `markdown` and `markdowns` use the Markdown glyph inside a blue rounded rectangle.
 
 ## Future custom modes
 

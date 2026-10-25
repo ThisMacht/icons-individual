@@ -53,3 +53,7 @@ or dependency on either reference repository is included.
 The custom `src/my/folder/folder-license.svg` and its closed variant reuse the
 copyright glyph paths from the vendored Symbols `src/icons/files/license.svg`,
 scaled as a folder badge. The same upstream MIT notices apply to that artwork.
+
+The custom `src/my/folder/folder-markdown.svg` and its closed variant reuse the
+glyph path and blue color from the vendored Symbols `src/icons/files/markdown.svg`,
+scaled inside a rounded rectangle. The same upstream MIT notices apply.

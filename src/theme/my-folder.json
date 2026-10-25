@@ -6,6 +6,8 @@
     ["folder-dataset", "my/folder/folder-dataset.svg"],
     ["folder-license-closed", "my/folder/folder-license-closed.svg"],
     ["folder-license", "my/folder/folder-license.svg"],
+    ["folder-markdown-closed", "my/folder/folder-markdown-closed.svg"],
+    ["folder-markdown", "my/folder/folder-markdown.svg"],
     ["folder-pig-closed", "my/folder/folder-pig-closed.svg"],
     ["folder-pig", "my/folder/folder-pig.svg"],
     ["folder-rainbow-closed", "my/folder/folder-rainbow-closed.svg"],
@@ -19,6 +21,8 @@
     "gay": "folder-rainbow",
     "license": "folder-license",
     "licenses": "folder-license",
+    "markdown": "folder-markdown",
+    "markdowns": "folder-markdown",
     "pig": "folder-pig",
     "pigpig": "folder-pig"
   }
