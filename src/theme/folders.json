@@ -13,6 +13,7 @@
     ".claude": "folder-claude",
     ".claude-code": "folder-claude",
     ".contentlayer": "folder-purple",
+    ".codex": "folder-agents",
     ".cursor": "folder-cursor",
     ".docker": "folder-docker",
     ".drizzle": "folder-drizzle",
