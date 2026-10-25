@@ -6,7 +6,7 @@
     </mask>
   </defs>
   <path d="M7.78388 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9.875C21 8.77043 20.1046 7.875 19 7.875H12.7161C12.2531 7.875 11.8044 7.71435 11.4466 7.42045L9.05336 5.45455C8.69558 5.16065 8.2469 5 7.78388 5Z" stroke="#64748B" stroke-width="2" fill="#64748B" mask="url(#marts-cutout)"/>
-  <g stroke="#4ADE80" stroke-width="1.5" stroke-linejoin="round">
+  <g transform="translate(17.75 16.5) scale(0.75) translate(-17.75 -16.5)" stroke="#4ADE80" stroke-width="1.5" stroke-linejoin="round">
     <rect x="12.5" y="11.5" width="10.5" height="10" rx="1"/>
     <path d="M12.5 15H23M12.5 18.25H23M16 15V21.5M19.5 15V21.5"/>
   </g>
