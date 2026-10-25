@@ -1,0 +1,17 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="neo4j-cutout">
+      <rect width="24" height="24" fill="white"/>
+      <rect x="10.5" y="9.5" width="13.5" height="14" rx="2.5" fill="black"/>
+    </mask>
+  </defs>
+  <path d="M7.78388 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9.875C21 8.77043 20.1046 7.875 19 7.875H12.7161C12.2531 7.875 11.8044 7.71435 11.4466 7.42045L9.05336 5.45455C8.69558 5.16065 8.2469 5 7.78388 5Z" stroke="#64748B" stroke-width="2" fill="#64748B" mask="url(#neo4j-cutout)"/>
+  <g transform="translate(18 16.5) scale(0.75) translate(-18 -16.5)">
+    <g stroke="#4ADE80" stroke-width="1.5" stroke-linecap="round">
+      <path d="M15.5 13H20M21 15L18.75 19M16.75 19L14.5 15"/>
+      <circle cx="13.5" cy="13" r="2"/>
+      <circle cx="22" cy="13" r="2"/>
+      <circle cx="17.75" cy="21" r="2"/>
+    </g>
+  </g>
+</svg>

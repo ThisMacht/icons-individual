@@ -98,6 +98,10 @@ graph, and a coral flag respectively. These badges match the smaller 75% sizing.
 Folders `schema`/`schemas`, `query`/`queries`, and `resolver`/`resolvers` use a cyan
 structure tree, blue magnifier, and purple input-to-result diagram respectively,
 with open/closed variants at 75% badge size.
+Database and storage folders `postgres`/`postgresql`, `minio`, `neo4j`, `mysql`,
+`duckdb`, `clickhouse`, `snowflake`, `bigquery`, `redshift`, `warehouse`, `datalake`,
+and `lakehouse` have custom illustrated pairs at 75% badge size. Folder `redis`
+uses the existing reference pair. Existing GraphQL and MongoDB mappings remain available.
 ZIP and other common compressed files use a blue zipper icon; RAR uses stacked
 books and TAR (including `.tar.gz`, `.tgz`, and `.tar.xz`) uses a brown archive box.
 Makefiles use an orange hammer, selected by filename or the `makefile` language ID.
