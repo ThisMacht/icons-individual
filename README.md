@@ -92,6 +92,9 @@ and blue dot-grid badges respectively.
 The data engineering folders `dags`, `staging`, `marts`, `seeds`, `snapshots`,
 and `macros` use a blue workflow, orange filter, green table, sprout, purple clock,
 and gold function symbol respectively, each with open and closed variants.
+Folders `intermediate`/`interm`, `ingestion`, `quality`, `lineage`, and `checkpoints`
+use amber chevrons, a blue intake arrow, a green checked shield, a purple dependency
+graph, and a coral flag respectively. These badges match the smaller 75% sizing.
 ZIP and other common compressed files use a blue zipper icon; RAR uses stacked
 books and TAR (including `.tar.gz`, `.tgz`, and `.tar.xz`) uses a brown archive box.
 Makefiles use an orange hammer, selected by filename or the `makefile` language ID.
