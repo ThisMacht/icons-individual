@@ -1,5 +1,7 @@
 {
   "definitions": [
+    ["folder-dataset-closed", "my/folder/folder-dataset-closed.svg"],
+    ["folder-dataset", "my/folder/folder-dataset.svg"],
     ["folder-license-closed", "my/folder/folder-license-closed.svg"],
     ["folder-license", "my/folder/folder-license.svg"],
     ["folder-pig-closed", "my/folder/folder-pig-closed.svg"],
@@ -8,6 +10,9 @@
     ["folder-rainbow", "my/folder/folder-rainbow.svg"]
   ],
   "associations": {
+    "data": "folder-dataset",
+    "dataset": "folder-dataset",
+    "datasets": "folder-dataset",
     "gay": "folder-rainbow",
     "license": "folder-license",
     "licenses": "folder-license",
