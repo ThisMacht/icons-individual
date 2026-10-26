@@ -1,8 +1,11 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <mask id="staging-cutout">
+    <mask id="staging-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
       <rect width="24" height="24" fill="white"/>
-      <rect x="10.5" y="9.5" width="13.5" height="14" rx="2.5" fill="black"/>
+      <g transform="translate(17.5 16.75) scale(0.75) translate(-17.5 -16.75)">
+        <path d="M12 11.5H23L19.5 16.5V20.5L16 22V16.5Z" fill="black" stroke="black" stroke-width="3.133" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M23 11.5H26V26H16V22L19.5 20.5V16.5Z" fill="black"/>
+      </g>
     </mask>
   </defs>
   <path d="M7.78388 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9.875C21 8.77043 20.1046 7.875 19 7.875H12.7161C12.2531 7.875 11.8044 7.71435 11.4466 7.42045L9.05336 5.45455C8.69558 5.16065 8.2469 5 7.78388 5Z" stroke="#64748B" stroke-width="2" fill="#64748B" mask="url(#staging-cutout)"/>

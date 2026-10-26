@@ -47,6 +47,8 @@ are excluded from the VSIX; `npm audit --omit=dev` reports no vulnerabilities.
 - `src/icons/folders/`: 252 vendored folder SVGs, including closed variants.
 - `src/icons/files/`: 325 file SVGs from the pinned Symbols base and Antigravity overrides.
 - `src/my/folder/` and `src/my/file/`: custom folder and file SVGs, included in the VSIX.
+  Custom folder masks follow each badge's silhouette with a small transparent gap.
+  Keep the mask shape and its transforms in sync with the badge in both folder variants.
 - `src/theme/definitions.json`: imported `[definition ID, asset path]` pairs.
   An array lets validation detect duplicate IDs before they are overwritten.
   Reference paths use `folders/` or `files/` under `src/icons/`.
