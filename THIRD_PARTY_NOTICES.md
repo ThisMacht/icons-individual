@@ -57,7 +57,3 @@ scaled as a folder badge. The same upstream MIT notices apply to that artwork.
 The custom `src/my/folder/folder-markdown.svg` and its closed variant reuse the
 glyph path and blue color from the vendored Symbols `src/icons/files/markdown.svg`,
 scaled inside a rounded rectangle. The same upstream MIT notices apply.
-
-The custom `src/my/file/proposal.svg` and `src/my/file/main-tex.svg` reuse the
-document outline from the vendored Symbols `src/icons/files/document.svg` with
-new vector symbols inside. The same upstream MIT notices apply to that outline.

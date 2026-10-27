@@ -108,8 +108,8 @@ ZIP and other common compressed files use a blue zipper icon; RAR uses stacked
 books and TAR (including `.tar.gz`, `.tgz`, and `.tar.xz`) uses a brown archive box.
 Makefiles use an orange hammer, selected by filename or the `makefile` language ID.
 Folder `research` uses a purple microscope with matching open/closed contour masks.
-Files named `proposal.md` and `main.tex` use a gold lightbulb document and a blue
-summation document respectively; other Markdown and TeX files retain their existing icons.
+Files named `proposal.md` and `main.tex` use a standalone gold lightbulb and a blue
+summation symbol respectively; other Markdown and TeX files retain their existing icons.
 
 ## Future custom modes
 
