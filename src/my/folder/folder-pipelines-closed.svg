@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <defs>
+    <mask id="pipelines-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+      <rect width="24" height="24" fill="white"/>
+      <g transform="translate(18 16.5) scale(0.75) translate(-18 -16.5)" fill="none" stroke="black" stroke-width="3.633" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11.5 10.5H15.5V12H18V15H20V16H22V19.5H24.5V23.5H20.5V22H18V19H16V18H14V14.5H11.5Z" fill="black"/>
+        <path d="M22 16H26V26H20.5V23.5H24.5V19.5H22Z" fill="black" stroke="none"/>
+      </g>
+    </mask>
+  </defs>
+  <path d="M7.78388 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9.875C21 8.77043 20.1046 7.875 19 7.875H12.7161C12.2531 7.875 11.8044 7.71435 11.4466 7.42045L9.05336 5.45455C8.69558 5.16065 8.2469 5 7.78388 5Z" stroke="#64748B" stroke-width="2" fill="#64748B" mask="url(#pipelines-cutout)"/>
+  <g transform="translate(18 16.5) scale(0.75) translate(-18 -16.5)" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 13H18V17H22V21"/>
+    <rect x="11.5" y="10.5" width="4" height="4" rx="0.5" fill="#60A5FA"/>
+    <rect x="16" y="15" width="4" height="4" rx="0.5" fill="#60A5FA"/>
+    <rect x="20.5" y="19.5" width="4" height="4" rx="0.5" fill="#60A5FA"/>
+  </g>
+</svg>

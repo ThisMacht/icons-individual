@@ -110,6 +110,11 @@ Makefiles use an orange hammer, selected by filename or the `makefile` language 
 Folder `research` uses a purple microscope with matching open/closed contour masks.
 Files named `proposal.md` and `main.tex` use a standalone gold lightbulb and a blue
 summation symbol respectively; other Markdown and TeX files retain their existing icons.
+Folders `pipeline`/`pipelines`, `connectors`, and `features` use blue connected blocks,
+an orange plug, and purple sliders. Folders `train`/`training`, `inference`/`serving`,
+`eval`/`evaluation`, `experiments`, and `metrics` use an orange brain, blue lightning
+bolt, green checklist, purple flask, and green chart. All have open/closed variants
+at 75% badge size with silhouette masks.
 
 ## Future custom modes
 

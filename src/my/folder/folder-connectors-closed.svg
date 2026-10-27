@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <defs>
+    <mask id="connectors-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+      <rect width="24" height="24" fill="white"/>
+      <g transform="translate(18 16.5) scale(0.75) translate(-18 -16.5)" fill="none" stroke="black" stroke-width="3.633" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 10.5V14M21 10.5V14" fill="none"/>
+        <path d="M13 14H23V16.5C23 19 20 20 18 20V22.5H26V26H18V20C16 20 13 19 13 16.5Z" fill="black"/>
+      </g>
+    </mask>
+  </defs>
+  <path d="M7.78388 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9.875C21 8.77043 20.1046 7.875 19 7.875H12.7161C12.2531 7.875 11.8044 7.71435 11.4466 7.42045L9.05336 5.45455C8.69558 5.16065 8.2469 5 7.78388 5Z" stroke="#64748B" stroke-width="2" fill="#64748B" mask="url(#connectors-cutout)"/>
+  <g transform="translate(18 16.5) scale(0.75) translate(-18 -16.5)" stroke="#FB923C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 10.5V14M21 10.5V14M13 14H23M14 14V16.5C14 21 22 21 22 16.5V14M18 20V22.5"/>
+  </g>
+</svg>

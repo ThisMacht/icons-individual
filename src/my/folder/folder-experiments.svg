@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <defs>
+    <mask id="experiments-cutout" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+      <rect width="24" height="24" fill="white"/>
+      <g transform="translate(18 16.5) scale(0.75) translate(-18 -16.5)" fill="none" stroke="black" stroke-width="3.633" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 10.5H21V14.5L24 20.5Q25 22 23 22H13Q11 22 12 20.5L16 14.5V10.5Z" fill="black"/>
+      </g>
+    </mask>
+  </defs>
+  <path d="M7.78388 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19H19C20.1046 19 21 18.1046 21 17V9.875C21 8.77043 20.1046 7.875 19 7.875H12.7161C12.2531 7.875 11.8044 7.71435 11.4466 7.42045L9.05336 5.45455C8.69558 5.16065 8.2469 5 7.78388 5Z" stroke="#64748B" stroke-width="2" mask="url(#experiments-cutout)"/>
+  <g transform="translate(18 16.5) scale(0.75) translate(-18 -16.5)" stroke="#C084FC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 10.5H21M16 10.5V14.5L12 20.5Q11 22 13 22H23Q25 22 24 20.5L20 14.5V10.5"/>
+    <path d="M14 18H22"/>
+    <circle cx="17" cy="20" r="0.6" fill="#C084FC" stroke="none"/>
+    <circle cx="20" cy="19.75" r="0.45" fill="#C084FC" stroke="none"/>
+  </g>
+</svg>
