@@ -1,7 +1,9 @@
 {
   "definitions": [
+    ["main-tex", "my/file/main-tex.svg"],
     ["makefile", "my/file/makefile.svg"],
     ["pig", "my/file/pig.svg"],
+    ["proposal", "my/file/proposal.svg"],
     ["rar", "my/file/rar.svg"],
     ["tar", "my/file/tar.svg"],
     ["zip", "my/file/zip.svg"]
@@ -47,9 +49,11 @@
   "fileNames": {
     "bsdmakefile": "makefile",
     "gnumakefile": "makefile",
+    "main.tex": "main-tex",
     "makefile": "makefile",
     "pig": "pig",
-    "pigpig": "pig"
+    "pigpig": "pig",
+    "proposal.md": "proposal"
   },
   "languageIds": {
     "makefile": "makefile"
